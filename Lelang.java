@@ -17,15 +17,15 @@ public class Lelang {
     Scanner scanner = new Scanner(System.in);
 
     public void mulai() {
-        System.out.println("=============================================================");
+        System.out.println("-------------------------------------------------------------");
         System.out.println("                       Selamat Datang");
-        System.out.println("=============================================================");
+        System.out.println("-------------------------------------------------------------");
         System.out.println("1. Beli barang");
         System.out.println("2. Jual Barang");
-        System.out.println("=============================================================");
+        System.out.println("-------------------------------------------------------------");
         System.out.print("Pilih aksi(1/2): ");
         pilih = scanner.nextInt();
-        System.out.println("=============================================================");
+        System.out.println("-------------------------------------------------------------");
     }
 
     public void mulai(Masyarakat masyarakat, Barang barang) {
@@ -54,13 +54,13 @@ public class Lelang {
                     }
                 }
 
-                System.out.println("=============================================================");
+                System.out.println("-------------------------------------------------------------");
                 System.out.println("                         INFO BARANG");
-                System.out.println("=============================================================");
+                System.out.println("-------------------------------------------------------------");
                 System.out.println("Nama Barang : " + barang.getNama(idBarang.get(0)));
                 System.out.println("Harga Barang : " + barang.getHargaBarang(idBarang.get(0)));
                 System.out.println("Penawaran tertinggi saat ini : Rp." + barang.getMaxBarang(idBarang.get(0)));
-                System.out.println("=============================================================");
+                System.out.println("-------------------------------------------------------------");
                 System.out.print("Apakah yakin membeli barang ini?(Y/N) : ");
                 yakin = scanner.next();
                 if (yakin.equals("Y")) {
@@ -70,13 +70,13 @@ public class Lelang {
 
             System.out.print("Masukkan Id anda : ");
             idPenawar.add(scanner.nextInt());
-            System.out.println("=============================================================");
+            System.out.println("-------------------------------------------------------------");
             System.out.println("                         Data Diri");
-            System.out.println("=============================================================");
+            System.out.println("-------------------------------------------------------------");
             System.out.println("Nama\t:" + masyarakat.getNama(idPenawar.get(0)));
             System.out.println("Alamat\t:" + masyarakat.getAlamat(idPenawar.get(0)));
             System.out.println("Telefon\t:" + masyarakat.getTelepon(idPenawar.get(0)));
-            System.out.println("=============================================================");
+            System.out.println("-------------------------------------------------------------");
 
             while (tawarr == false) {
                 System.out.print("Masukkan penawaran anda : ");
@@ -100,9 +100,9 @@ public class Lelang {
             barang.setId(idTerbaru);
             barang.addNew();
 
-            System.out.println("=============================================================");
+            System.out.println("-------------------------------------------------------------");
             System.out.println("                         INFO BARANG");
-            System.out.println("=============================================================");
+            System.out.println("-------------------------------------------------------------");
             System.out.println("Id\t: " + barang.getId(idTerbaru));
             System.out.println("Nama\t: " + barang.getNama(idTerbaru));
             System.out.println("Harga\t: Rp." + barang.getHargaBarang(idTerbaru));
